@@ -3,7 +3,7 @@ const cars = [
     {
       vin: '1111111111111',
       make: 'toyota',
-      module: 'prius',
+      model: 'prius',
       mileage: 215000,
       title: 'clean',
       transmission: 'manual',
@@ -11,14 +11,14 @@ const cars = [
     {
       vin: '1111111111111',
       make: 'toyota',
-      module: 'corolla',
+      model: 'corolla',
       mileage: 15000,
       title: 'salvage',
     },
     {
       vin: '1111111111111',
       make: 'ford',
-      module: 'focus',
+      model: 'focus',
       mileage: 15000,
     },
   ]
