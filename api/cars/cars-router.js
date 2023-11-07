@@ -6,7 +6,7 @@ const {
     checkVinNumberValid, 
     checkVinNumberUnique, 
 } = require('./cars-middleware')
-const router = express.Router
+const router = express.Router()
 
 router.get('/', async (req, res, next) => {
     try {

@@ -12,7 +12,7 @@ const checkCarId = async (req, res, next) => {
     }
 } catch (err) {
     next(err)
-}
+  }
 }
 
 const checkCarPayload = (req, res, next) => {
@@ -32,6 +32,7 @@ const checkCarPayload = (req, res, next) => {
     status: 400, 
     message: 'mileage is missing',
   })
+  next()
 }
 
 const checkVinNumberValid = (req, res, next) => {
@@ -39,7 +40,7 @@ const checkVinNumberValid = (req, res, next) => {
     next()
   } else {
     next({
-      statue: 400, message: 'vin ${req.body.vin} is invalid',
+      statue: 400, message: `vin ${req.body.vin} is invalid`,
     })
   }
 }
@@ -50,7 +51,7 @@ const checkVinNumberUnique = async (req, res, next) => {
     if (!existing) {
       next()
     } else {
-      next({ status: 400, message: 'vin ${req.body.vin} already exists' })
+      next({ status: 400, message: `vin ${req.body.vin} already exists` })
     }
   } catch (err) {
     next(err)
